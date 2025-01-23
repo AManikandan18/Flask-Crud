@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add_user</title>
+    <style>
+        /* body{
+            background-color: white;
+            max-width: 100vh;
+            margin: auto;
+            display: block;
+            text-align: center;
+            align-items: center;
+            justify-content: center;
+        } */
+        h1{
+            color: rgb(35, 46, 85);            
+            
+            max-width: 60vh;
+            margin: auto;
+            margin-top: 20vh;
+            margin-bottom: 5vh;
+            padding: 5px 0px;
+            display: block;
+            justify-content: center;
+            text-align: center;
+            align-items: center;
+            /* margin-left: 38.7vh; */
+            background-color: whitesmoke;
+            border: 2px solid #ccc;
+            box-shadow: 10px 12px 22px rgba(0, 0, 0, 0.2);
+        }
+        .box{
+            max-width: 50vh;
+            min-height: 40vh;
+            margin: auto;
+            /* min-height: 30vh; */
+            display: block;
+            justify-content: center;
+            text-align: center;
+            align-items: center;
+            /* margin-left: 38.7vh; */
+            background-color: whitesmoke;
+            border: 2px solid #ccc;
+            box-shadow: 10px 12px 22px rgba(0, 0, 0, 0.2);
+        }
+        .uname{
+            margin-top: 6vh;
+        }
+        .psw{
+            margin-top: 5vh;
+        }
+        label{
+            color: blueviolet;
+            font-size: 20px;
+        }
+        .submit>input{
+            color: blueviolet;
+            font-size: larger;
+            margin-top: 2vh;
+            background-color: white;
+            border: 1px solid black;
+            box-shadow: 10px 12px 22px rgba(0, 0, 0, 0.2);
+            border-radius: 5px;
+            padding: 5px;
+
+        }
+        .submit>input:hover{
+            background-color: rgb(212, 206, 206);
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome To Edit User</h1>
+    <form action="{{url_for('edit_user',uid=datas.UID)}}" method="POST">
+        <div class="box">
+            <div class="uname">
+                <label for="uname">User Name</label><br><br>
+                <input type="text" name="uname" id="uname" required value="{{datas.username}}">
+            </div>
+            <div class="psw">
+                <label for="contact">Contact</label><br><br>
+                <input type="text" name="contact" id="contact" value="{{datas.contact}}" required maxlength="10">
+            </div>
+            <div class="submit">
+                <input type="submit" name="submit" id="submit">
+            </div>
+        </div>
+    </form>
+    <!-- {% for i in range(30) %}
+    {% if i%2==0 %}
+
+    {{i}}
+    {% else %}
+    {{"not"}}
+    {% endif %}
+    {% endfor %}
+
+    {% for num in number %}
+    {{num}}
+    {% endfor %} -->
+
+</body>
+</html>

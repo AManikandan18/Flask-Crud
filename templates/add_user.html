@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add_user</title>
+    <style>
+        body{
+            background-color: white;
+            max-width: 60vh;
+            margin: auto;
+
+
+        }
+        h1{
+            color: rgb(35, 46, 85);
+            margin-top: 18vh;
+            font-size: 5vh;
+        }
+        .box{
+            max-width: 50vh;
+            min-height: 35vh;
+            margin-top: 7vh;
+            margin-left: 3vh;
+            display: block;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background-color: whitesmoke;
+            border: 2px solid #ccc;
+            box-shadow: 10px 12px 22px rgba(0, 0, 0, 0.2);
+        }
+        .uname{
+            margin-top: 6vh;
+        }
+        .psw{
+            margin-top: 5vh;
+        }
+        label{
+            color: blueviolet;
+            font-size: 20px;
+        }
+        .submit>input{
+            color: blueviolet;
+            font-size: larger;
+            margin-top: 3vh;
+            background-color: white;
+            border: 1px solid black;
+            box-shadow: 10px 12px 22px rgba(0, 0, 0, 0.2);
+            border-radius: 5px;
+            padding: 5px 10px;
+
+        }
+        .submit>input:hover{
+            background-color: rgb(212, 206, 206);
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome To Add User</h1>
+    <form action="/add_user" method="POST">
+        <div class="box">
+            <div class="uname">
+                <label for="uname">User Name</label><br>
+                <input type="text" name="uname" id="uname" required>
+            </div>
+            <div class="psw">
+                <label for="contact">Contact</label><br>
+                <input type="text" name="contact" id="contact" required maxlength="10">
+            </div>
+            <div class="submit">
+                <input type="submit" name="submit" id="submit">
+            </div>
+        </div>
+    </form>
+    <!-- {% for i in range(30) %}
+    {% if i%2==0 %}
+
+    {{i}}
+    {% else %}
+    {{"not"}}
+    {% endif %}
+    {% endfor %}
+
+    {% for num in number %}
+    {{num}}
+    {% endfor %} -->
+
+</body>
+</html>
