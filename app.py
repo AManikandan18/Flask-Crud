@@ -33,7 +33,7 @@ def index():
     data=cur.fetchall()
 
     return render_template("index.html", datas=data)
-    # return "<h1>hello and everyone<h1>"
+    # return "<h1>hello and Welcome everyone<h1>"
 
 @app.route("/add_user",methods=["POST","GET"])
 def add_user():
