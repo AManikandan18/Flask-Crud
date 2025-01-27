@@ -63,7 +63,7 @@ def edit_user(uid):
         contact=request.form["contact"]
 
         con=sql.connect("database.db")
-        cur=con.cursor()
+        cur=con.cursor() #this is connect.
 
         cur.execute("update user_table SET username=?,contact=? where UID=?",(uname,contact,uid))        
         con.commit()
