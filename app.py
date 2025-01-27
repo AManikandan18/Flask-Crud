@@ -67,7 +67,7 @@ def edit_user(uid):
 
         cur.execute("update user_table SET username=?,contact=? where UID=?",(uname,contact,uid))        
         con.commit()
-        con.close() #this is best practice and avoid the database lock error..... ("where is start the database lock error : 1. Unclosed Database Connections,2. Long-Running or Uncommitted Transactions,3. Multiple Connections or Threads,4. Incorrect File Permissions")
+        con.close() #this is best practice and avoid the database lock errors.... ("where is start the database lock error : 1. Unclosed Database Connections,2. Long-Running or Uncommitted Transactions,3. Multiple Connections or Threads,4. Incorrect File Permissions")
         
         # flash("User added")
         flash("Success")
