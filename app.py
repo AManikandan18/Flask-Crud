@@ -2,10 +2,10 @@ from flask import Flask,render_template,request,redirect,flash,url_for
 import sqlite3 as sql
 
 app=Flask(__name__)
-app.secret_key="admin123" #this is used for secure the session and cookies.
+app.secret_key="admin123" #this is mainly used for secure the session and cookies.
 
 
-# Types of Parameter:
+# Types of Parameter: 
 
 # @app.route("/parameter/<username>")
 # def parameter(username ):
