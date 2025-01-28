@@ -5,7 +5,7 @@ app=Flask(__name__)
 app.secret_key="admin123" #this is mainly used for secure the session and cookies.
 
 
-# Types of Parameter: 
+# Types of Parameter:
 
 # @app.route("/parameter/<username>")
 # def parameter(username ):
@@ -27,7 +27,7 @@ app.secret_key="admin123" #this is mainly used for secure the session and cookie
 def index():
     con=sql.connect("database.db")
     # then con-(connection-kku row factory nu oru attribute namma set pannalam edhukkuna database table la irundhu namakku kidaikkira ella values hu tuple value ha than kidaikkum like tuple index(0,1) so adha print pandrathu konjam kastama irukkum so namma "row_factory" nu oru attribute onnu use panna namakku table la irukka value namakku column name oda sendhu varum so namma value print kku column.value va easy ha print pannalam. )
-    con.row_factory=sql.Row #this is fetch the value from user table and that value stored like column_name.value va enakku eduthuttu varum.
+    con.row_factory=sql.Row #this is fetch the value from user table and that value stored like column_name.value va enakku eduthuttu varum so easy print panna vaikkalam.
     cur=con.cursor()
     cur.execute("select * from user_table")
     data=cur.fetchall()
