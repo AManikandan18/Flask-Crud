@@ -4,7 +4,7 @@ import sqlite3 as sql
 app=Flask(__name__)
 app.secret_key="admin123" #this is mainly used for secure the session and cookies.
 
-#This is for git
+#This is for github
 # Types of Parameter:
 
 # @app.route("/parameter/<username>")
