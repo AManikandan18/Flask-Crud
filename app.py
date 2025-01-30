@@ -2,10 +2,9 @@ from flask import Flask,render_template,request,redirect,flash,url_for
 import sqlite3 as sql
 
 app=Flask(__name__)
-app.secret_key="admin123" #this is mainly used for secure the session and cookies.
+app.secret_key="admin123" #this is used for secure the session and cookies.
 
-#This is for github
-# Types of Parameter:
+# Types of Parameters:
 
 # @app.route("/parameter/<username>")
 # def parameter(username ):
@@ -15,11 +14,6 @@ app.secret_key="admin123" #this is mainly used for secure the session and cookie
 # @app.route('/post/<int:post_id>/cmt/<int:cmt_id>')
 # def show_comment(post_id,cmt,cmt_id):
 #     return f'Post ID: {post_id},cmd {cmt} Comment ID: {cmt_id}'
-
-
-
-
-
 
 
 @app.route("/")
