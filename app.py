@@ -2,7 +2,7 @@ from flask import Flask,render_template,request,redirect,flash,url_for
 import sqlite3 as sql
 
 app=Flask(__name__)
-app.secret_key="admin123" #this is used for secure the session and cookies. (For example this secret key used for flash the message).
+app.secret_key="admin123" #this is mai used for secure the session and cookies. (For example this secret key used for flash the message).
 
 # Types of Parameters:
 
